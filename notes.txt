@@ -1,0 +1,23 @@
+# STARTING A VIRTUAL ENV
+- run sudo apt install python3.11-venv
+- run python3.11 -m venv venv
+- run source venv/bin/activate
+
+# INSTALLING DEPENDENCIES
+- run python3.11 -m pip install Flask
+- run python3.11 -m pip install -r requirements.txt
+
+# INITIALIZE THE DATABASE FILE
+Now that init-db has been registered with the app, it can be called using the flask command, similar to the run command from the previous page.
+
+Note
+If you’re still running the server from the previous page, you can either stop the server, or run this command in a new terminal. If you use a new terminal, remember to change to your project directory and activate the env as described in Installation.
+
+Run the init-db command:
+
+$ flask --app Flask_App init-db
+Initialized the database.
+There will now be a flask_app.sqlite file in the instance folder in your project.
+
+# RUN THE APP USING A LOCAL db
+- run flask --app Flask_App run --debug

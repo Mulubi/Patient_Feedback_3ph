@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<!-- tells jinja that this template should replace the blocks from the base template -->
+
+{% block header %}
+<h1> {% block title %} Register {% endblock %} </h1>
+{% endblock %}
+<!-- the above pattern sets the title block and then outputs the value
+of it into the header block so that both the window and page share the
+same title without writing it twice -->
+
+{% block content %}
+<form method="post">
+    <label for="username"> Username </label>
+    <input name="username" id="username" required>
+
+    <label for="password"> Password </label>
+    <input type="password" name="password" id="password" required>
+
+    <input type="submit" value="Register">
+</form>
+{% endblock %}
